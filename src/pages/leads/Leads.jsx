@@ -10,7 +10,7 @@ const MAIN_TABS = ["Inquiries"];
 
 const SUB_TABS = {
   0: ["New Inquiries", "Nurturing Inquiries", "Won Deals", "Dropped Inquiries"],
-  1: ["Tab A", "Tab B", "Tab C"],
+  1: ["Tab A", "Tab B", "Tab C "],
 };
 
 // Sub-tab → status mapping. Mirrors the standard pipeline: raw inquiries,
@@ -38,6 +38,7 @@ function getMergedLeads() {
   }
 
   let deletedLeads = [];
+
   try {
     const raw = localStorage.getItem("deletedLeads");
     if (raw) deletedLeads = JSON.parse(raw);
